@@ -1,15 +1,8 @@
 import React from "react";
-import Digit from "./Digit";
+
 
 //create your first component
-
-
-const Home = ({num}) => {
-
-	const digit = num % 10;
-	const digit1 = Math.floor((num % 100)/10);
-	const digit2 = Math.floor((num % 1000)/100);
-
+const ClockFace = (count) => {
 	return (
 		<div className="container">
 			<div className="row justify-content-center mt-5">
@@ -20,9 +13,8 @@ const Home = ({num}) => {
 						</div>
 						<div className="card-body">
 							<div className="row text-center">
-								<Digit key={1} num={digit2}/>
-								<Digit key={2} num={digit1}/>
-								<Digit key={3} num={digit}/>
+								<Digit  num={count}/>
+								
 							</div>
 						</div>
 					</div>
@@ -32,4 +24,4 @@ const Home = ({num}) => {
 	);
 };
 
-export default Home;
+export default ClockFace;
